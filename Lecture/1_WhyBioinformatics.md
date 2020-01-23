@@ -163,7 +163,7 @@ How many "A"s are there in this DNA sequence?
 cat DNAseq.fa | tr -cd "A" | wc -c
 ```
 
-What is the RNA sequence (ie, transcribe the DNA)?
+What is the RNA equivalent of the sequence (ie, replace all "T" with the RNA equivalent)?
 
 ```bash
 cat DNAseq.fa | sed "s/T/U/g"
