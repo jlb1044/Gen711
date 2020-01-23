@@ -6,6 +6,12 @@ One of the most fundamental parts of bioinformatics is a basic familiarity with 
 
 * Everything is case sensitive. Gen711 is not the same as gen711.
 
+* Unlike a GUI interface to view files on your personal computer, once you delete something it is **permanently gone**. You can easily delete an entire hard drive's worth of data by accident in seconds. I call this "pulling a Newhouse." A friend of mine did this to a hard drive in his lab, and there was much swearing.
+
+* Related to the above, there is no undo button. If you write over a file or make a change to it, the deed is done and cannot be undone.
+
+* The two points above are a very good reason why you should 1) be extremely careful when in terminal and 2) maintain good backup copies of all data outside of the environment you are working in! It is unreasonably easy to delete months and thousands of dollars worth of work.
+
 * Spaces in file names should be avoided. Spaces are a special character (represented as `\s`) and thus make things wacky. 
 
 * Your `$PATH` is the collection of locations where the computer looks for executables (programs).
@@ -28,7 +34,13 @@ In order to access this cluster, we have to open a terminal window.
 * PuTTY: A terminal which you can install from [the putty website](https://www.putty.org/)
 * MobaXterm: A terminal which you can install from [the MobaXterm website](https://mobaxterm.mobatek.net/)
 
-Once you have these installed, we can access your Ron account and get you rolling! In order to access the cluster, you have to point your computer to the location you want to login to. The address for Ron is `ron.sr.unh.edu`, and to login you specify `your_username@ron.sr.unh.edu` Your Ron username should be your UNH username. You use the `ssh` command to login. So, to access your account you would use:
+Once you have these installed, we can access your Ron account and get you rolling! 
+
+**BEFORE WE DO THIS, A CRITICAL NOTE:**
+
+If you are on a Mac and working through the terminal, or on a PC an working through MobaXterm, once you open the terminal you are *working in your computer's directories*. This means that you can accidentally delete/corrupt files on your personal computer, *including your operating system.* Please be extremely careful. I am not responsible for any personal sorrow you suffer in this manner.
+
+In order to access the cluster, you have to point your computer to the location you want to login to. The address for Ron is `ron.sr.unh.edu`, and to login you specify `your_username@ron.sr.unh.edu` Your Ron username should be your UNH username. You use the `ssh` command to login. So, to access your account you would use:
 
 ```bash
 ssh your_username@ron.sr.unh.edu
