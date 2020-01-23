@@ -38,7 +38,7 @@ Once you have these installed, we can access your Ron account and get you rollin
 
 **BEFORE WE DO THIS, A CRITICAL NOTE:**
 
-If you are on a Mac and working through the terminal, or on a PC an working through MobaXterm, once you open the terminal you are *working in your computer's directories*. This means that you can accidentally delete/corrupt files on your personal computer, *including your operating system.* Please be extremely careful. I am not responsible for any personal sorrow you suffer in this manner.
+If you are on a Mac and working through the terminal, or on a PC an working through MobaXterm, once you open the terminal you are **working in your computer's directories**. This means that you can accidentally delete/corrupt files on your personal computer, **including your operating system.** Please be extremely careful. I am not responsible for any personal sorrow you suffer in this manner.
 
 In order to access the cluster, you have to point your computer to the location you want to login to. The address for Ron is `ron.sr.unh.edu`, and to login you specify `your_username@ron.sr.unh.edu` Your Ron username should be your UNH username. You use the `ssh` command to login. So, to access your account you would use:
 
