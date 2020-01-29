@@ -121,5 +121,30 @@ FASTQ files usually have the extension `.fq` or `.fastq`. We will discuss these 
 
 Take a look at the fastq example in your downloaded zip directory (`example.fq`). **Question 10:** What command would you use to count the number of nucleotides in this file? How many are there?
 
+### Delimited files
+
+Many files that you will see/work with are delimited files, which means that they are basically tables of data with columns separated by a delimiter, and rows separated by a return character. Common delimiters are commas (`,`) and tabs (`\t`). These types of files can be read into typical spreadsheet GUI programs such as Excel (but be careful, they can be hundreds of thousands of rows in length, which will cause your computer to struggle/die). I have an example of a tab-delimited file amongst the files you downloaded. Take a look at it.
+
+```bash
+less cancer_genes.bed
+```
+
+This file has a number of columns, as you can clearly see. Now, lets say you only care about the gene name, and the chromosome it is on. We can show only those columns in a number of ways, but `cut` will serve our purposes. We can use `cut` to separate the file by a particular character using the `-d` flag, and then get the specific columns we want using the `-f` flag. Importantly, cut will cut at *every instance* of your delimiter, so if your file is irregular you can get weird outputs. Since the program's assumed delimiter is tab (`\t`) and chromosome and gene are in columns 1 and 4 respectively we can use:
+
+```bash
+cut -f 1,4 cancer_genes.bed
+```
+
+That is a lot of lines of output, and you can imagine seeing this work on a file with a huge number of lines. **Question 11:** Using a *pipe* how would you show only a subset of the output to test that your code worked? 
+
+Testing your code is important, especially if you are manipulating the data/files you have. **Remember anything you do to them is permanent**. 
+
+Since we only care about chromosome number and gene name, lets save this file with only those two columns. You can always redirect the standard output (what gets printed to the screen) using the `>` symbol in your line of code.
+
+```bash
+cut -f 1,3 cancer_genes.bed > cancer_genes.bed
+```
+
+Now take a look at your new file. **Question 12:** What did you do, and was it what you wanted? How would you change the code to give you what you wanted, and what would you have to do now to get the file you want?
 
 Please remember to fill out the assignment from canvas, save it as a pdf, and submit it via canvas.
