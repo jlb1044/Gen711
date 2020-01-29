@@ -30,10 +30,18 @@ This is the last chapter from Charles Darwin’s last chapter of The Origin of S
 head darwin_chapter.txt
 ```
 
+After viewing this, you may have been surprised to learn how many lines `head` automatically shows! Try this again with a new file:
+
+```bash
+head genes.txt
+```
+
+This is an interesting example, and highlights something about UNIX files. That is that until there is a return character (called that because you had to physically return the carriage of a typewriter), it is viewed as the same line of text even if it looks like multiple lines on your screen. Return characters are represented with `\n`.
+
 To specify the number of lines viewed you can use the -n flag. Show the first 100 lines of the file.
 
 ```bash
-head -n 100 darwin_chapter.txt 
+head -n 100 genes.txt 
 ```
 
 To view the last few lines of a file, use the tail command.
@@ -42,7 +50,9 @@ To view the last few lines of a file, use the tail command.
 tail darwin_chapter.txt
 ```
 
-**Question 2:** How many lines are in this text file?
+Again, it might be easier to view what tail accomplishes with the `genes.txt` file.
+
+When you are working with data, you will want to sprinkle in many, many little sanity checks. This is especially true if you are trying to manipulate data or files in some fashion. One way I do this frequently is by counting lines of a file (or counting lines in the output of a chunk of code). You can do this with the `wc` command. `wc` is extremely useful! Make sure you look at the various options it has with the `man` program. **Question 2:** How many lines are in this text file?
 
 ```bash
 wc -l darwin_chapter.txt
@@ -66,15 +76,15 @@ Now, you may be interested in counting exactly how many times he says this. Luck
 grep "theory" darwin_chapter.txt | wc -l
 ```
 
-**Question 4:** Why might counting the number of times Darwin used theory in this way be problematic and imprecise?
+**Question 4:** Why might counting the number of times Darwin used theory in this way be problematic and imprecise? This will take some thinking about things like return characters and the way `wc` works--so make sure you looked at the man page!
 
 ### FASTA files
 
-The FASTA format is a common file format that is used for storing DNA, RNA or Protein sequences. FASTA files begin with a header line starting with ‘>’ that contains text information of the sequence and often an identifier such as the genbank ID (NM_004985.3).  The subsequent lines contain the DNA, RNA or Protein sequence.  Genomic, transcriptomic, and proteomic assemblies will come in this format. FASTA files usually end with the `*.fa` or `*.fasta` extension.
+The FASTA format is a common file format that is used for storing DNA, RNA or Protein sequences (generally not raw sequence data). FASTA files begin with a header line starting with ‘>’ that contains text information of the sequence and often an identifier such as the genbank ID (NM_004985.3).  The subsequent lines contain the DNA, RNA or Protein sequence.  Genomic, transcriptomic, and proteomic assemblies will come in this format. FASTA files usually end with the `*.fa` or `*.fasta` extension.
 
 Let’s examine the FASTA file for the KRAS gene
 ```bash
-more kras.fa
+more kras.fa # remember you can exit more, less, and similar programs with the "q" button
 ```
 
 **Question 5:** how many lines are in this fasta file?
@@ -87,7 +97,9 @@ grep -v ">" kras.fa | wc -c
 
 **Question 6:** how many total characters are in this fasta file?
 
-**Question 7:** how many total nucleotides are in this fasta file?
+**Question 7:** how would you count the total number of nucleotides in this fasta file?
+
+**QUestion 8:** given the commands you've learned so far, and your new knowledge about UNIX files, why might you need to be careful counting nucleotides with commands I've given you so far?
 
 ### Multi FASTA files
 
