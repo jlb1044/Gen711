@@ -105,12 +105,12 @@ grep -v ">" kras.fa | wc -c
 
 Multi fasta files are the same format as a 'regular' fasta file. However, they contain >1 (usually many more) individual sequences. Each sequence is denoted by the header identifier `>`. The zipped directory you downloaded has a multi fasta file (often referred to as just a fasta file) of protein sequences called `human.pep.fa.gz`. Each character within the sequence is a single amino acid. Because these files can be very large, many times they are compressed using the program `gzip` to save time downloading and disk space. Gzipped files are denoted with `.gz`. 
 
-**Question 8:** What command would you use to count the number of proteins in this file? How many proteins are there?
+**Question 9:** What command would you use to count the number of proteins in this file? How many proteins are there?
 
 
-### Fastq files
+### FASTQ files
 
-Fastq files are the most common modern format for storing sequencing reads. FASTA and FASTQ are rather similar, but FASTQ is almost always used for storing sequencing reads and contains associated quality values for each nucleotide. A single read in a FASTQ file is spread across four lines:
+As we learned in class, FASTQ files are the most common modern format for storing sequencing reads. FASTA and FASTQ are rather similar, but FASTQ is almost always used for storing sequencing reads and contains associated quality values for each nucleotide. A single read in a FASTQ file is spread across four lines:
 
 1. `@` followed by the read name
 2. Nucleotide sequence
@@ -119,4 +119,7 @@ Fastq files are the most common modern format for storing sequencing reads. FAST
 
 FASTQ files usually have the extension `.fq` or `.fastq`. We will discuss these more in the lecture section of class.
 
-Take a look at the fastq example in your downloaded zip directory (`example.fq`). **Question 9:** What command would you use to count the number of nucleotides in this file? How many are there?
+Take a look at the fastq example in your downloaded zip directory (`example.fq`). **Question 10:** What command would you use to count the number of nucleotides in this file? How many are there?
+
+
+Please remember to fill out the assignment from canvas, save it as a pdf, and submit it via canvas.
