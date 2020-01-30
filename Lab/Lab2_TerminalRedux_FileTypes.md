@@ -6,10 +6,10 @@ For today's lab we will continue our introduction to basic Unix and working in t
 
 Much of today's material is heavily borrowed from Dr. Chris Balakrishnan's bioinformatics workshop.
 
-First we will begin by learning to download some data from online. There are a variety of ways to do this, but for today we will use `curl`. This is a very useful and important aspect to bioinformatics. I have a compressed folder of files stored on the course's GitHub page. Download this:
+First we will begin by learning to download some data from online. There are a variety of ways to do this, but for today we will use `wget`. This is a very useful and important aspect to bioinformatics. I have a compressed folder of files stored on the course's GitHub page. Download this:
 
 ```bash
-curl LINK
+wget https://github.com/AdamStuckert/Gen711/raw/master/Lab/Files/Lab2.zip
 ```
 
 Next, view your current directory. Think back to last week to do this. Once you have done this, you should be able to see that you have downloaded a new file! You did this without a user interface or clicking anything! It should be called `Lab2.zip`. Because this is a compressed folder, if you view this with `less Lab2.zip` you should be able to see the contents of the folder. Before accessing any of them, you will have to uncompress this folder first:
